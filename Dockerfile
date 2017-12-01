@@ -23,7 +23,13 @@ ENV SPACY_VERSION    2.0.3
 
 # spacy
 RUN \
-    pip3 install -U spacy==${SPACY_VERSION} \
+    pip3 install -U jieba \
+        ipython \
+        numpy \
+        pandas \
+        requests \
+        chardet \
+    && pip3 install -U spacy==${SPACY_VERSION} \
     && python3 -m spacy download en \
     && python3 -m spacy download xx
 

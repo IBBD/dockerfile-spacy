@@ -3,6 +3,12 @@
 ## 安装的包
 
 - spapy
+- jieba
+- ipython
+- numpy
+- pandas
+- requests
+- chardet
 
 ## 更新历史
 
