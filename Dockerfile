@@ -19,10 +19,13 @@ RUN mkdir -p /var/www \
         python3-pip \
     && pip3 install -U pip
 
+ENV SPACY_VERSION    2.0.3
+
 # spacy
 RUN \
-    pip3 install -U spacy \
+    pip3 install -U spacy==${SPACY_VERSION} \
     && python3 -m spacy download en
+    && python3 -m spacy download xx
 
 
 # Define working directory.
